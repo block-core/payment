@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1737220783473,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/chunk-C5TJY7WL.js",
+        "/chunk-JOHMCBLR.js",
+        "/index.html",
+        "/main-7CFYQVBV.js",
+        "/manifest.webmanifest",
+        "/polyfills-FFHMD2TL.js",
+        "/styles-2B6YEXQJ.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.png",
+        "/icons/icon-128x128.png",
+        "/icons/icon-144x144.png",
+        "/icons/icon-152x152.png",
+        "/icons/icon-192x192.png",
+        "/icons/icon-384x384.png",
+        "/icons/icon-512x512.png",
+        "/icons/icon-72x72.png",
+        "/icons/icon-96x96.png",
+        "/icons/payment-padded.png",
+        "/icons/payment.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/chunk-C5TJY7WL.js": "a2b5cfd8fa2e08f0f9fcf8fea0fdbb88ec99d808",
+    "/chunk-JOHMCBLR.js": "12b7f7c981e86f812898d954dc18fe63d18e3b6f",
+    "/favicon.png": "50c16f26ede028b4e988fa893a50890cdb24708e",
+    "/icons/icon-128x128.png": "50c16f26ede028b4e988fa893a50890cdb24708e",
+    "/icons/icon-144x144.png": "6412ef2f4244f3b595f466c3cd5a79d1fe93d229",
+    "/icons/icon-152x152.png": "dec9eca52db2901881edaafde4b7600111788f54",
+    "/icons/icon-192x192.png": "131d18f1e628f5a130a1d29f0ce9891e5c50fa95",
+    "/icons/icon-384x384.png": "37d53d83392d979049eaeb4dacf0171963e26245",
+    "/icons/icon-512x512.png": "d69ecb4cff6f2347b8282ff1c05466b672342259",
+    "/icons/icon-72x72.png": "8ed145655e11ff59d65cd601766a781bda2275ec",
+    "/icons/icon-96x96.png": "3aa9f800b967d350c6371225601f16747af64e4b",
+    "/icons/payment-padded.png": "aa46ce139740831b7401e9015e1b58c8203e46e6",
+    "/icons/payment.png": "8fb1f1c4cf5b03869bcb4200a95b9c4c4f2d2d66",
+    "/index.html": "74a9674464c4a9fd801f55ca5b4316b10c392289",
+    "/main-7CFYQVBV.js": "e7bed4e7f4e37a4e795cfa0ae755e80523a7697f",
+    "/manifest.webmanifest": "f3f39e0c27d0b1b618a46078633fac83ff20a9c5",
+    "/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/styles-2B6YEXQJ.css": "9548445a29c33baa9cb5292fde9475e858280bf4"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
