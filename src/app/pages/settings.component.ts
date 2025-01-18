@@ -24,6 +24,18 @@ import { SettingsService, StellarAsset } from '../services/settings.service';
       </div>
 
       <div class="form-group">
+        <label for="cityCoinAddress">City Coin Address</label>
+        <input
+          id="cityCoinAddress"
+          type="text"
+          [(ngModel)]="cityCoinAddress"
+          placeholder="Enter your City Coin address"
+          (change)="saveCityCoinAddress()"
+        />
+        <p class="help-text">Your City Coin address for transactions</p>
+      </div>
+
+      <div class="form-group">
         <label for="asset">Asset</label>
         <select id="asset" [(ngModel)]="selectedAsset.code" (change)="saveAsset()">
           <option value="EURMTL">EURMTL (mtl.montelibero.org)</option>
@@ -78,6 +90,7 @@ import { SettingsService, StellarAsset } from '../services/settings.service';
 })
 export class SettingsComponent implements OnInit {
   stellarAddress = '';
+  cityCoinAddress = '';
   selectedAsset: StellarAsset = {
     code: 'EURMTL',
     issuer: SettingsService.EURMTL_ISSUER
@@ -89,6 +102,9 @@ export class SettingsComponent implements OnInit {
     this.settingsService.getStellarAddress().subscribe(address => {
       this.stellarAddress = address;
     });
+    this.settingsService.getCityCoinAddress().subscribe(address => {
+      this.cityCoinAddress = address;
+    });
     this.settingsService.getAsset().subscribe(asset => {
       this.selectedAsset = asset;
     });
@@ -96,6 +112,10 @@ export class SettingsComponent implements OnInit {
 
   saveStellarAddress() {
     this.settingsService.setStellarAddress(this.stellarAddress);
+  }
+
+  saveCityCoinAddress() {
+    this.settingsService.setCityCoinAddress(this.cityCoinAddress);
   }
 
   saveAsset() {

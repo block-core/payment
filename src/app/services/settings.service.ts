@@ -14,6 +14,7 @@ export class SettingsService {
   
   private readonly STELLAR_ADDRESS_KEY = 'payment-stellar-address';
   private readonly CURRENCY_KEY = 'payment-currency';
+  private readonly CITY_COIN_ADDRESS_KEY = 'payment-city-coin-address';
 
   private readonly DEFAULT_ASSET: StellarAsset = {
     code: 'EURMTL',
@@ -22,6 +23,10 @@ export class SettingsService {
 
   private stellarAddressSubject = new BehaviorSubject<string>(
     localStorage.getItem(this.STELLAR_ADDRESS_KEY) || ''
+  );
+
+  private cityCoinAddressSubject = new BehaviorSubject<string>(
+    localStorage.getItem(this.CITY_COIN_ADDRESS_KEY) || ''
   );
 
   private assetSubject = new BehaviorSubject<StellarAsset>(
@@ -44,5 +49,14 @@ export class SettingsService {
   setAsset(asset: StellarAsset) {
     localStorage.setItem(this.CURRENCY_KEY, JSON.stringify(asset));
     this.assetSubject.next(asset);
+  }
+
+  getCityCoinAddress() {
+    return this.cityCoinAddressSubject.asObservable();
+  }
+
+  setCityCoinAddress(address: string) {
+    localStorage.setItem(this.CITY_COIN_ADDRESS_KEY, address);
+    this.cityCoinAddressSubject.next(address);
   }
 }
